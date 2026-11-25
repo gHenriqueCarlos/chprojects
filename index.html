@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>chProjects — Carlos Henrique Projetos</title>
+  <meta name="description" content="Projetos de Carlos Henrique Gonçalves: Terra Marcada, Legacy: Ano 25, Projeto Mutante e outros.">
+  <meta property="og:title" content="chProjects — Carlos Henrique Projetos">
+  <meta property="og:description" content="Apps e jogos de Carlos Henrique Gonçalves.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/logo-512.png">
+  <meta name="theme-color" content="#07111e">
+  <link rel="icon" href="assets/img/logo-64.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/logo-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a href="#inicio" class="brand" aria-label="chProjects, início">
+        <img src="assets/img/logo-192.png" alt="" width="34" height="34">
+        <span><span class="brand__ch">ch</span>Projects</span>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav" class="nav">
+        <a href="#projetos">Projetos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="container hero__content">
+        <div>
+          <h1>Oi, eu sou o Carlos Henrique.</h1>
+          <p class="hero__lead">
+            Desenvolvo apps e jogos. Aqui estão alguns deles: o Terra Marcada, que uso no
+            trabalho de topografia, o Legacy: Ano 25, o Projeto Mutante e mais algumas coisas.
+          </p>
+          <div class="hero__actions">
+            <a href="#projetos" class="btn btn--primary">Ver projetos</a>
+            <a href="#contato" class="btn btn--ghost">Contato</a>
+          </div>
+        </div>
+        <img class="hero__logo" src="assets/img/logo-512.png" alt="Logo da chProjects" width="240" height="240">
+      </div>
+    </section>
+
+    <section id="projetos" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Projetos</h2>
+          <div class="filters" role="tablist" aria-label="Filtrar projetos">
+            <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+            <button class="filter" data-filter="app" role="tab" aria-selected="false">Apps</button>
+            <button class="filter" data-filter="jogo" role="tab" aria-selected="false">Jogos</button>
+            <button class="filter" data-filter="web" role="tab" aria-selected="false">Sites</button>
+            <button class="filter" data-filter="unity-asset" role="tab" aria-selected="false">Unity</button>
+          </div>
+        </div>
+        <div class="grid" id="project-grid"></div>
+        <p class="empty" id="project-empty" hidden>Nada nessa categoria por enquanto.</p>
+      </div>
+    </section>
+
+    <section id="sobre" class="section">
+      <div class="container about">
+        <h2>Sobre</h2>
+        <div class="about__text">
+          <p>
+            Meu nome é <strong>Carlos Henrique Gonçalves</strong>. chProjects quer dizer
+            Carlos Henrique Projetos, e é o nome que uso para publicar o que faço.
+          </p>
+          <p>
+            Trabalho com Unity e C# na maior parte do tempo, em jogos e também em apps como o
+            Terra Marcada, que nasceu da necessidade do trabalho de campo na
+            <strong>Rural Plan</strong>. Também faço sites e alguns addons para a Unity Asset Store.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section">
+      <div class="container contact">
+        <div>
+          <h2>Contato</h2>
+          <p class="contact__lead">Pode chamar no WhatsApp ou mandar um e-mail.</p>
+        </div>
+        <ul class="contact__list" id="contact-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> Carlos Henrique Gonçalves</span>
+      <a href="#inicio">Voltar ao topo</a>
+    </div>
+  </footer>
+
+  <!-- Modal de detalhes do projeto -->
+  <dialog class="modal" id="project-modal" aria-labelledby="modal-title">
+    <div class="modal__body">
+      <button class="modal__close" aria-label="Fechar" data-close>×</button>
+      <div class="modal__cover" id="modal-cover"></div>
+      <div class="modal__content">
+        <p class="modal__kind" id="modal-kind"></p>
+        <h3 id="modal-title"></h3>
+        <div class="modal__desc" id="modal-desc"></div>
+        <ul class="tags" id="modal-tags"></ul>
+        <div class="gallery" id="modal-gallery"></div>
+        <div class="modal__links" id="modal-links"></div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
