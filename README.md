@@ -1,47 +1,22 @@
-# chProjects — Carlos Henrique Projetos
+<p align="center">
+  <img src="assets/img/logo-192.png" alt="chProjects" width="120">
+</p>
 
-Site estático (HTML + CSS + JS puro, sem build) com portfólio de projetos e contatos,
-pronto para o GitHub Pages.
+# chProjects
 
-## Estrutura
+Site da **chProjects** (Carlos Henrique Projetos), onde reúno os apps e jogos que desenvolvo.
 
-```
-index.html            página única (início, projetos, sobre, contato)
-assets/css/style.css  estilos
-assets/js/data.js     ← CONTEÚDO: projetos e contatos (edite aqui)
-assets/js/main.js     lógica (cards, filtros, modal, menu mobile)
-assets/img/           favicon e imagens dos projetos
-.nojekyll             faz o GitHub Pages servir os arquivos como estão
-```
+Alguns dos projetos que estão lá:
 
-## Editar conteúdo
+- **Terra Marcada**: app de campo e CAD rural para topografia e georreferenciamento ([Google Play](https://play.google.com/store/apps/details?id=com.chprojects.terramarcada))
+- **Legacy: Ano 25**: jogo de sobrevivência multiplayer para PC e Android ([site do jogo](https://legacy.ruralplanpb.com/))
+- **Projeto Mutante**: jogo de ação cooperativo para celular ([Google Play](https://play.google.com/store/apps/details?id=com.chprojects.com.projetomutante))
 
-- **Projetos e contatos:** abra `assets/js/data.js`. Cada projeto é um bloco `{ ... }`;
-  copie um bloco para criar outro. Os comentários no topo explicam cada campo.
-- **Imagens:** coloque em `assets/img/projects/` e preencha o campo `image`
-  (ex.: `"assets/img/projects/legacy.jpg"`). Proporção ideal: 16:9.
-- **Textos do topo e do "Sobre":** direto no `index.html`.
+## Contato
 
-## Rodar localmente
+- E-mail: carloshenriquebr92@gmail.com
+- WhatsApp: (61) 99947-8329
 
-```powershell
-python -m http.server 8080
-```
+---
 
-Depois abra http://localhost:8080.
-
-## Publicar no GitHub Pages
-
-1. Crie um repositório no GitHub (ex.: `chprojects`) e envie o código:
-   ```powershell
-   git remote add origin https://github.com/SEU-USUARIO/chprojects.git
-   git push -u origin main
-   ```
-2. No repositório: **Settings → Pages → Build and deployment**
-   - Source: **Deploy from a branch**
-   - Branch: **main** / pasta **/ (root)** → Save
-3. Em ~1 minuto o site fica em `https://SEU-USUARIO.github.io/chprojects/`.
-
-> Dica: se o repositório se chamar `SEU-USUARIO.github.io`, o site fica na raiz
-> (`https://SEU-USUARIO.github.io/`). Para um domínio próprio (ex.: `chprojects.com.br`),
-> configure em **Settings → Pages → Custom domain**.
+Site estático em HTML, CSS e JavaScript, publicado pelo GitHub Pages.
